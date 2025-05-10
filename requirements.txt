@@ -1,0 +1,11 @@
+fastapi
+unicorn
+httpx
+pydantic
+pydantic-settings
+python-dotenv
+langchain
+langchain-community
+langchain-groq
+langchain-ollama
+langchain-openai
