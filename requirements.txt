@@ -1,5 +1,5 @@
 fastapi
-unicorn
+uvicorn
 httpx
 pydantic
 pydantic-settings
