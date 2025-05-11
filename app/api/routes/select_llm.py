@@ -13,7 +13,7 @@ class LLMOptionsResponse(BaseModel):
     """
     Groq: List[str]
     Ollama: List[str]
-    OppenAI: List[str]
+    OpenAI: List[str]
 
 @router.get("/llm/llm_options",
             tags=["LLM"],
