@@ -7,7 +7,7 @@ from utils.logger import logger
 
 router = APIRouter()
 
-class LLMOptrionsResponse(BaseModel):
+class LLMOptionsResponse(BaseModel):
     """
     Response model for LLM options.
     """
@@ -16,8 +16,8 @@ class LLMOptrionsResponse(BaseModel):
     OppenAI: List[str]
 
 @router.get("/llm/llm_options",
-            tags=["LLM Options"],
-            response_model=LLMOptrionsResponse,
+            tags=["LLM"],
+            response_model=LLMOptionsResponse,
             dependencies=[Depends(verify_api_key)])
 async def provide_llm_options():
     logger.info("Fetching available LLM options.")
