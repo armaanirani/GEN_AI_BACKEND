@@ -43,8 +43,8 @@ A production-ready Python backend boilerplate for Large Language Model (LLM) int
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/llm-backend-boilerplate.git
-   cd llm-backend-boilerplate
+   git clone https://github.com/armaanirani/GEN_AI_BACKEND.git
+   cd GEN_AI_BACKEND
    ```
 
 2. Create and activate a virtual environment:
@@ -179,6 +179,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - your.email@example.com
+Armaan Irani - armaanirani@gmail.com
 
-Project Link: [https://github.com/your-repo/llm-backend-boilerplate](https://github.com/your-repo/llm-backend-boilerplate)
+Project Link: [https://github.com/armaanirani/GEN_AI_BACKEND](https://github.com/armaanirani/GEN_AI_BACKEND)
