@@ -1,0 +1,31 @@
+from fastapi import APIRouter, Depends
+from pydantic import BaseModel
+from typing import List
+from app.api.deps.auth import verify_api_key
+from app.services.llm_options import fetch_llm_options
+from utils.logger import logger
+
+router = APIRouter()
+
+class LLMOptrionsResponse(BaseModel):
+    """
+    Response model for LLM options.
+    """
+    Groq: List[str]
+    Ollama: List[str]
+    OppenAI: List[str]
+
+@router.get("/llm/llm_options",
+            tags=["LLM Options"],
+            response_model=LLMOptrionsResponse,
+            dependencies=[Depends(verify_api_key)])
+async def provide_llm_options():
+    logger.info("Fetching available LLM options.")
+    
+    try:
+        llm_details = fetch_llm_options()
+        logger.info("LLM options fetched successfully.")
+        return llm_details
+    except Exception as e:
+        logger.exception("Error fetching LLM options.")
+        raise
