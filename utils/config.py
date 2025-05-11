@@ -3,7 +3,7 @@ load_dotenv()
 
 from pathlib import Path
 import json
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 from utils.logger import logger
 
 # Path to config file in root directory
